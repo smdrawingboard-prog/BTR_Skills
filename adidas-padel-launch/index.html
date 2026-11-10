@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Earn Your Stripes</title>
+<style>
+html,body{margin:0;background:#000}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#fff;font-family:"Inter Display","Inter",sans-serif;color:#000}
+#world{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.abs{position:absolute}
+svg.layer{position:absolute;left:0;top:0;overflow:visible}
+.ln{position:absolute;overflow:hidden;white-space:nowrap;line-height:1;padding:.06em 0 .16em;font-weight:800;letter-spacing:-.035em;text-transform:uppercase}
+.ln>span{display:block}
+.ctr{left:0;width:1920px;text-align:center}
+.pk{color:#FF1F8E}
+.wh{color:#fff}
+.sm{font-weight:600;letter-spacing:-.01em;text-transform:none}
+/* site */
+#site{left:0;top:0;width:1920px;height:1080px}
+#promo{left:0;top:0;width:1920px;height:56px;background:#000}
+#promo .pl{position:absolute;left:0;top:0;width:920px;height:56px;background:#e6e6e6;font-size:19px;font-weight:600;line-height:56px;text-indent:20px;letter-spacing:-.02em}
+#promo .pr{position:absolute;right:58px;top:0;line-height:56px;color:#fff;font-size:15px;font-weight:500}
+#hdr{left:0;top:56px;width:1920px;height:74px;border-bottom:1px solid #e3e3e3}
+#logoSlot{left:34px;top:13px;width:78px;height:50px}
+#nav{left:374px;top:7px;height:60px;white-space:nowrap}
+.ni{display:inline-block;height:60px;line-height:60px;padding:0 20px;font-size:18px;font-weight:500;letter-spacing:.02em}
+.ni.inv{background:#000;color:#fff}
+.chev{display:inline-block;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:0 0 5px 10px}
+#icons{right:34px;top:20px}
+#hero{left:0;top:144px;width:1920px;height:600px}
+#hero .p{position:absolute;top:0;width:640px;height:600px}
+#hero .t{position:absolute;left:0;width:640px;text-align:center;color:#fff;font-weight:800;letter-spacing:.06em}
+#arr{left:0;top:800px;width:1920px;height:300px}
+#arr h2{position:absolute;left:242px;top:36px;margin:0;font-size:36px;font-weight:800;letter-spacing:.03em}
+.card{position:absolute;top:110px;width:492px;height:300px;background:#ededed}
+.card b{position:absolute;left:0;top:0;background:#fff;padding:6px 10px;font-size:19px;font-weight:700}
+.dd{background:#fff;border:1px solid #d6d6d6;box-sizing:border-box}
+.row{height:44px;line-height:44px;padding:0 20px;font-size:17px;font-weight:500}
+</style>
+</head>
+<body>
+<div id="stage"><div id="world">
+
+  <!-- hook type -->
+  <div class="ln" data-in="0.02" data-out="1.62" style="left:150px;top:150px;font-size:230px"><span>Can you</span></div>
+  <div class="ln" data-in="0.5" data-out="1.68" style="left:150px;top:385px;font-size:230px"><span>earn your</span></div>
+  <div class="ln pk" data-in="1.0" data-out="1.74" style="left:150px;top:620px;font-size:230px"><span>stripes?</span></div>
+
+  <!-- adidas padel store, rebuilt as layers -->
+  <div id="site" class="abs">
+    <div id="promo" class="abs rv" data-in="2.05"><div class="pl">JOIN THE AFP CREW AND SAVE 15% ON YOUR NEXT PURCHASE</div><div class="pr">Send to: &nbsp;España</div></div>
+    <div id="hdr" class="abs">
+      <div id="logoSlot" class="abs"></div>
+      <div id="nav" class="abs">
+        <span class="ni rv" id="nProd" data-in="2.12">PRODUCTS<i class="chev"></i></span><span class="ni inv rv" data-in="2.15">ADIPOWER LEGEND</span><span class="ni rv" data-in="2.18">OUR PLAYERS<i class="chev"></i></span><span class="ni rv" data-in="2.21">NEWS</span><span class="ni rv" data-in="2.24">COMMUNITY</span><span class="ni rv" data-in="2.27">ADIDAS PADEL TOUR</span><span class="ni inv rv" data-in="2.30">SALES<i class="chev"></i></span>
+      </div>
+      <svg id="icons" class="abs rv" data-in="2.3" width="140" height="34" viewBox="0 0 140 34" fill="none" stroke="#000" stroke-width="3.4">
+        <circle cx="13" cy="14" r="8.5"/><path d="M19.5 20.5 27 28"/>
+        <circle cx="68" cy="10" r="5.5" fill="#000"/><path d="M58 30c0-9 20-9 20 0z" fill="#000"/>
+        <path d="M112 12h22v17h-22z" fill="#000"/><path d="M117 12c0-10 12-10 12 0"/>
+      </svg>
+    </div>
+    <div id="hero" class="abs rv" data-in="2.2" data-out="4.0">
+      <div class="p" style="left:0;background:#d4d4d4"></div>
+      <div class="p" style="left:640px;background:#161616">
+        <div class="t" style="top:36px;font-size:38px">ADIPOWER LEGEND</div>
+        <div class="t" style="top:84px;font-size:30px">BY SEBA NERONE</div>
+        <svg class="abs" style="left:220px;top:140px" width="200" height="440" viewBox="0 0 200 440"><path d="M100 10c62 0 92 52 92 112 0 70-52 108-70 150l-6 150h-32l-6-150C60 230 8 192 8 122 8 62 38 10 100 10z" fill="#fff"/><g fill="#161616" id="holes"></g></svg>
+      </div>
+      <div class="p" style="left:1280px;background:#c9c9c9"></div>
+    </div>
+    <div id="arr" class="abs rv" data-in="2.3" data-out="4.04">
+      <h2>NEW ARRIVALS</h2>
+      <div class="card" style="left:200px"><b>NEW</b></div>
+      <div class="card" style="left:705px"><b>NEW</b></div>
+      <div class="card" style="left:1210px"><b>NEW</b></div>
+    </div>
+    <div id="dd" class="abs dd" style="top:130px;width:300px">
+      <div class="row">Collection 2026</div><div class="row">Padel rackets</div><div class="row">Padel bag Backpack</div><div class="row">Sneakers</div><div class="row">Clothes</div><div class="row" id="rAcc">Padel Accessories</div><div class="row">Pickleball</div><div class="row">Padel packs</div>
+    </div>
+    <div id="sub" class="abs dd" style="width:270px">
+      <div class="row">Overgrips and grips</div><div class="row">Wristbands</div><div class="row" id="rBalls">Balls</div>
+    </div>
+  </div>
+
+  <svg class="layer" id="svg1" width="1920" height="1080">
+    <defs>
+      <filter id="mb" x="-60%" y="-120%" width="220%" height="340%"><feGaussianBlur id="mbg" stdDeviation="0 0"/></filter>
+      <clipPath id="zc"><polygon id="zc0"/><polygon id="zc1"/><polygon id="zc2"/></clipPath>
+    </defs>
+    <line id="floor" x1="1050" y1="820" x2="1720" y2="820" stroke="#000" stroke-width="4"/>
+    <g id="ballG" filter="url(#mb)"><ellipse id="ball" fill="#000"/></g>
+    <image id="zebra" href="assets/zebra.jpg" width="1050" height="557" y="233" preserveAspectRatio="xMidYMid slice" clip-path="url(#zc)"/>
+    <g id="extras" fill="#fff"><polygon/><polygon/><polygon/><polygon/><polygon/><polygon/></g>
+  </svg>
+
+  <!-- mid captions -->
+  <div class="ln" data-in="5.0" data-out="5.8" style="left:200px;top:400px;font-size:104px"><span>These stripes</span></div>
+  <div class="ln" data-in="5.5" data-out="5.84" style="left:200px;top:520px;font-size:104px"><span>can only be</span></div>
+  <div class="ln pk" data-in="6.1" data-out="7.78" style="left:200px;top:380px;font-size:150px"><span>earned.</span></div>
+  <div class="ln sm wh" data-in="7.0" data-out="7.82" style="left:206px;top:570px;font-size:44px"><span>Investec. Out of the Ordinary.</span></div>
+  <div class="ln wh" data-in="9.0" data-out="11.72" style="left:200px;top:300px;font-size:84px"><span>Join us</span></div>
+  <div class="ln wh" data-in="10.0" data-out="11.75" style="left:200px;top:400px;font-size:84px"><span>and you could</span></div>
+  <div class="ln wh" data-in="10.5" data-out="11.78" style="left:200px;top:500px;font-size:84px"><span>hold the <i class="pk" style="font-style:normal">keys</i></span></div>
+  <div class="ln wh" data-in="11.0" data-out="11.81" style="left:200px;top:600px;font-size:84px"><span>to the season.</span></div>
+
+  <svg class="layer" id="svg2" width="1920" height="1080"><circle id="wfill" cx="1300" cy="330" r="0" fill="#fff"/></svg>
+
+  <!-- end card -->
+  <div class="ln sm ctr" data-in="13.0" data-out="99" style="top:452px;font-size:50px"><span>adidas padel × Investec × Mercedes-Benz</span></div>
+  <div class="ln ctr" data-in="13.5" data-out="99" style="top:540px;font-size:130px"><span>Earn your <i class="pk" style="font-style:normal">stripes.</i></span></div>
+  <div class="ln sm ctr" data-in="14.0" data-out="99" style="top:712px;font-size:44px"><span>You could hold the keys to the season.</span></div>
+  <div class="ln sm ctr" data-in="14.5" data-out="99" style="top:782px;font-size:44px"><span>Thank you.</span></div>
+
+  <svg class="layer" id="svg3" width="1920" height="1080">
+    <circle id="ring" fill="none" stroke-width="14"/>
+    <polygon id="blade"/>
+    <g id="trio"><polygon/><polygon/><polygon/></g>
+    <g id="cursor"><path d="M0 0v30l8-7 6 13 6-3-6-13h11z" fill="#000" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></g>
+  </svg>
+
+</div></div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const seg=(t,a,b)=>clamp((t-a)/(b-a));
+const lerp=(a,b,p)=>a+(b-a)*p;
+const expoOut=x=>x<=0?0:x>=1?1:1-Math.pow(2,-10*x);
+const expoIn=x=>x<=0?0:x>=1?1:Math.pow(2,10*(x-1));
+const expoIO=x=>x<=0?0:x>=1?1:x<.5?Math.pow(2,20*x-10)/2:(2-Math.pow(2,-20*x+10))/2;
+const spring=x=>x<=0?0:x>=1?1:1-Math.exp(-8*x)*Math.cos(7.5*x);
+const PINK=[255,31,142],WHITE=[255,255,255],SILVER=[201,206,211];
+const mixC=(a,b,p)=>{p=clamp(p);return `rgb(${a.map((v,i)=>Math.round(lerp(v,b[i],p))).join(',')})`};
+const pts=q=>q.map(p=>p[0].toFixed(2)+','+p[1].toFixed(2)).join(' ');
+const lerpQ=(a,b,p)=>a.map((pt,i)=>[lerp(pt[0],b[i][0],p),lerp(pt[1],b[i][1],p)]);
+const rot=(q,c,th)=>{const s=Math.sin(th),k=Math.cos(th);return q.map(p=>[c[0]+(p[0]-c[0])*k-(p[1]-c[1])*s,c[1]+(p[0]-c[0])*s+(p[1]-c[1])*k])};
+
+/* three-stripe mark geometry (unit = 1/100 of mark width) */
+const U=[-0.485,-0.875],BW=27.8,PITCH=35.2,L1=[10.4,35.6,63.3];
+function bars(L,g,wm=1){return [0,1,2].map(i=>{const gi=Array.isArray(g)?g[i]:g,x0=L.X+L.S*PITCH*i,w=L.S*BW*wm;
+  const a=L.S*L1[i]*gi,b=a+L.S*13.5*wm*clamp(gi*4);
+  return [[x0,L.Y],[x0+w,L.Y],[x0+w+U[0]*b,L.Y+U[1]*b],[x0+U[0]*a,L.Y+U[1]*a]];});}
+function mixL(a,b,p){const S=a.S*Math.pow(b.S/a.S,p);const pp=Math.abs(b.S-a.S)<1e-6?p:(S-a.S)/(b.S-a.S);return{X:lerp(a.X,b.X,pp),Y:lerp(a.Y,b.Y,pp),S};}
+function cross(k,e=1){const V=330,yF=560,yN=lerp(560,1180,e),f=y=>(y-V)/(560-V),cx=y=>960+k*120*f(y),hw=y=>36*f(y);
+  return [[cx(yN)-hw(yN),yN],[cx(yN)+hw(yN),yN],[cx(yF)+hw(yF),yF],[cx(yF)-hw(yF),yF]];}
+const RACE=[[[1088,1180],[1132,1180],[1196,660],[1168,660]],[[1190,1180],[1410,1180],[1372,660],[1228,660]],[[1468,1180],[1512,1180],[1432,660],[1404,660]]];
+const SC=[1300,470],CK=[1300,330];
+function star(i,r){const a=([150,-90,30][i]+r)*Math.PI/180,R=143,q=R*.15,d=x=>[Math.cos(x),Math.sin(x)],s=Math.PI/3;
+  const m=(v,k)=>[SC[0]+v[0]*k,SC[1]+v[1]*k];return [SC.slice(),m(d(a+s),q),m(d(a),R),m(d(a-s),q)];}
+function tooth(i){const ty=[610,675,740][i],w=[44,64,84][i];return [[1316,ty+18],[1316+w,ty+18],[1316+w,ty-18],[1316,ty-18]];}
+const HOOK={X:520,Y:1170,S:13},GH=[11,3.3,1.9],ZL={X:905,Y:790,S:8.3},END={X:820.2,Y:400,S:3};
+
+let M=null;
+function init(){ // measure layout once for match cuts (no transforms applied yet)
+  const r=id=>$(id).getBoundingClientRect();
+  const pr=r('nProd');$('dd').style.left=pr.left+'px';
+  const ac=r('rAcc');$('sub').style.left=(pr.left+299)+'px';$('sub').style.top=ac.top+'px';
+  const ls=r('logoSlot'),S=ls.width/103,ba=r('rBalls');
+  M={HDR:{X:ls.left+5*S,Y:ls.bottom-2,S},prod:[pr.left+pr.width/2-8,pr.top+pr.height/2],acc:[ac.left+150,ac.top+22],
+     balls:[ba.left+150,ba.top+22],ballO:[ba.left+60,ba.top+22]};
+  const h=$('holes');let s='';for(let y=0;y<7;y++)for(let x=0;x<6;x++){const px=45+x*22,py=50+y*24;if(Math.hypot((px-100)/80,(py-120)/105)<1)s+=`<circle cx="${px}" cy="${py}" r="5.5"/>`}h.innerHTML=s;
+  document.querySelectorAll('.card').forEach(c=>{c.insertAdjacentHTML('beforeend','<svg style="position:absolute;left:170px;top:8px" width="150" height="330" viewBox="0 0 200 440"><path d="M100 10c62 0 92 52 92 112 0 70-52 108-70 150l-6 150h-32l-6-150C60 230 8 192 8 122 8 62 38 10 100 10z" fill="#fff" stroke="#111" stroke-width="5"/><g fill="#111">'+s+'</g></svg>')});
+}
+
+function cam(t){let s,fx,fy;
+  if(t<2){s=lerp(1,1.04,t/2);fx=960;fy=540}
+  else if(t<4){const e=expoOut(seg(t,2.05,2.75));s=lerp(1.04,1.66,e)+.06*seg(t,2,4);fx=lerp(960,590,e);fy=lerp(540,330,e)+25*expoIO(seg(t,2.9,3.6))}
+  else if(t<6){const e=expoOut(seg(t,4,4.8));s=lerp(1.72,1.06,e)+.04*seg(t,4,6);fx=lerp(590,960,e);fy=lerp(355,540,e)}
+  else{s=1.10+.12*(t-6)/9;fx=960;fy=540}
+  return{s,fx,fy};}
+
+function ball(t){ // position, radius, squash
+  if(t<4)return{x:0,y:0,r:0,sq:0};
+  const P0=M.ballO,P1=[1250,330];let x,y,r=90,sq=0;
+  if(t<4.5){const p=expoIO(seg(t,4.08,4.5));x=lerp(P0[0],P1[0],p);y=lerp(P0[1],P1[1],p);r=lerp(0,26,expoOut(seg(t,4,4.25)))+64*p}
+  else if(t<5){const q=(t-4.5)/.5;x=1250;y=330+400*q*q}
+  else if(t<5.5){const q=(t-5)/.5;x=lerp(1250,1380,q);y=730-1000*q*(1-q)}
+  else if(t<6){const q=(t-5.5)/.5;x=lerp(1380,1500,q);y=730-560*q*(1-q)}
+  else{x=1500;y=730;r=90+2100*expoOut(seg(t,6,6.4))}
+  if(t>=4.9&&t<6)for(const tl of[5,5.5])sq+=.14*Math.exp(-Math.pow((t-tl)/.05,2));
+  return{x,y,r,sq};}
+const ballL=b=>({S:Math.max(b.r,.01)*.0105,X:b.x-46.6*b.r*.0105,Y:b.y+33.5*b.r*.0105});
+
+function trio(t){let q,fill=mixC(PINK,PINK,0),show=true;
+  if(t<1.5)show=false;
+  else if(t<2)q=bars(HOOK,[0,1,2].map(i=>GH[i]*expoOut(seg(t,1.5+.05*i,1.86+.05*i))));
+  else if(t<4){const p=spring(seg(t,2,2.5));q=bars(mixL(HOOK,M.HDR,p),[0,1,2].map(i=>lerp(GH[i],1,clamp(p))))}
+  else if(t<6){const p=expoOut(seg(t,4,4.32));q=bars(mixL(M.HDR,ballL(ball(t)),p),1);fill=mixC(PINK,WHITE,p)}
+  else if(t<6.5){const p=expoOut(seg(t,6,6.42));q=bars(mixL(ballL({x:1500,y:730,r:90}),ZL,p),1);fill='#fff'}
+  else if(t<8){const g=t<7.5?1-expoOut(seg(t,6.5,6.9)):expoOut(seg(t,7.55,7.92));q=bars(ZL,g);fill='#fff';show=g>.002}
+  else if(t<9){const p=expoOut(seg(t,8,8.42));const b=bars(ZL,1);q=b.map((x,i)=>lerpQ(x,cross(i-1),p));fill='#fff'}
+  else if(t<10){const p=expoOut(seg(t,9,9.42));q=[0,1,2].map(i=>lerpQ(cross(i-1),RACE[i],p));fill=mixC(WHITE,SILVER,p)}
+  else if(t<11){const p=spring(seg(t,10,10.5)),r=-50*(1-expoOut(seg(t,10,10.9)));q=[0,1,2].map(i=>lerpQ(RACE[i],star(i,r),p));fill=mixC(SILVER,SILVER,0)}
+  else if(t<12){const p=expoOut(seg(t,11,11.4));q=[0,1,2].map(i=>lerpQ(star(i,0),tooth(i),p));fill=mixC(SILVER,PINK,p*1.6)}
+  else if(t<12.5){const th=Math.PI/2*spring(seg(t,12,12.45));q=[0,1,2].map(i=>rot(tooth(i),CK,th))}
+  else{const p=spring(seg(t,12.5,13)),e=bars(END,1);q=[0,1,2].map(i=>lerpQ(rot(tooth(i),CK,Math.PI/2),e[i],p))}
+  return{q,fill,show};}
+
+function cursorPos(t){const A=[1560,820];let p;
+  if(t<2.62)p=expoIO(seg(t,2.05,2.46)),p=[lerp(A[0],M.prod[0],p),lerp(A[1],M.prod[1],p)];
+  else if(t<3.1){const e=expoIO(seg(t,2.62,2.98));p=[lerp(M.prod[0],M.acc[0],e),lerp(M.prod[1],M.acc[1],e)]}
+  else if(t<4.08){const e=expoIO(seg(t,3.1,3.46));p=[lerp(M.acc[0],M.balls[0],e),lerp(M.acc[1],M.balls[1],e)];
+    if(t>=4){const b=ball(t),e2=expoOut(seg(t,4,4.08));p=[lerp(p[0],b.x+6,e2),lerp(p[1],b.y+6,e2)]}}
+  else if(t<4.5){const b=ball(t);p=[b.x+6,b.y+6]}
+  else if(t<6){const e=expoIn(seg(t,4.5,4.95));p=[lerp(1256,2250,e),lerp(336,700,e)]}
+  else if(t<12){const e=expoIO(seg(t,11.12,11.48));p=[lerp(1800,1395,e),lerp(1220,330,e)]}
+  else if(t<12.5){const th=Math.PI/2*spring(seg(t,12,12.45));p=rot([[1395,330]],CK,th)[0]}
+  else{const e=expoIn(seg(t,12.5,12.9));p=[lerp(1300,2300,e),lerp(425,1300,e)]}
+  const down=(t>=2.5&&t<2.6)||(t>=3.5&&t<3.6)||(t>=4&&t<4.5)||(t>=11.5&&t<12.5);
+  return{p,down,show:(t>=2.02&&t<5)||(t>=11.1&&t<12.95)};}
+
+window.seek=function(t){
+  if(!M)init();
+  const c=cam(t);
+  $('world').style.transform=`translate(${(960-c.fx*c.s).toFixed(3)}px,${(540-c.fy*c.s).toFixed(3)}px) scale(${c.s.toFixed(5)})`;
+  // text lines: unfold from a mask, leave upward
+  document.querySelectorAll('.ln').forEach(el=>{const i=+el.dataset.in,o=+el.dataset.out;
+    const y=(1-expoOut(seg(t,i,i+.36)))*108-expoIn(seg(t,o,o+.2))*112;
+    el.firstElementChild.style.transform=`translateY(${y.toFixed(2)}%)`;el.style.visibility=(t<i||t>o+.2)?'hidden':'visible'});
+  // site pieces unfold downward, collapse upward
+  $('site').style.visibility=t>=2.03&&t<6.5?'visible':'hidden';
+  document.querySelectorAll('.rv').forEach(el=>{const i=+el.dataset.in,o=el.dataset.out?+el.dataset.out:99;
+    const p=expoOut(seg(t,i,i+.4))-expoOut(seg(t,o,o+.42));
+    el.style.clipPath=`inset(0 0 ${(100*(1-p)).toFixed(2)}% 0)`;el.style.transform=`translateY(${(-14*(1-clamp(p))).toFixed(2)}px)`});
+  $('hdr').style.clipPath=`inset(0 0 ${(100*(1-expoOut(seg(t,2.08,2.4)))).toFixed(2)}% 0)`;
+  const dd=expoOut(seg(t,2.52,2.86))-expoOut(seg(t,3.62,3.95)),sb=expoOut(seg(t,3.0,3.3))-expoOut(seg(t,4.0,4.25));
+  $('dd').style.clipPath=`inset(0 0 ${(100*(1-dd)).toFixed(2)}% 0)`;$('sub').style.clipPath=`inset(0 0 ${(100*(1-sb)).toFixed(2)}% 0)`;
+  const act=t>=2.5&&t<3.95;$('nProd').style.background=act?'#000':'transparent';$('nProd').style.color=act?'#fff':'#000';
+  $('rAcc').style.background=t>=2.98?'#ececec':'transparent';
+  const bs=t>=3.5;$('rBalls').style.background=bs?'#000':(t>=3.44?'#ececec':'transparent');$('rBalls').style.color=bs?'#fff':'#000';
+  // floor line grows from where the ball will land
+  const fl=expoOut(seg(t,4.5,4.9));$('floor').setAttribute('x2',(1050+670*fl).toFixed(1));$('floor').style.visibility=t>=4.5&&t<6.4?'visible':'hidden';
+  // ball: blur follows vertical speed
+  const b=ball(t),b0=ball(t-.004),b1=ball(t+.004),vy=(b1.y-b0.y)/.008,vx=(b1.x-b0.x)/.008,el=$('ball');
+  el.setAttribute('cx',b.x.toFixed(2));el.setAttribute('cy',(b.y+b.r*b.sq).toFixed(2));el.setAttribute('rx',(b.r*(1+b.sq*.7)).toFixed(2));el.setAttribute('ry',(b.r*(1-b.sq)).toFixed(2));
+  const blur=t>=4.5&&t<6;$('mbg').setAttribute('stdDeviation',blur?`${Math.min(8,Math.abs(vx)*.004).toFixed(2)} ${Math.min(14,Math.abs(vy)*.0045).toFixed(2)}`:'0 0');
+  $('ballG').setAttribute('filter',blur?'url(#mb)':'none');$('ballG').style.visibility=t>=4&&t<12.6?'visible':'hidden';
+  // zebra seen through the stripes
+  const zOn=t>=6.45&&t<7.96,zw=expoOut(seg(t,7,7.4))-expoOut(seg(t,7.5,7.85));
+  $('zebra').style.visibility=zOn?'visible':'hidden';$('zebra').setAttribute('x',(610-24*seg(t,6.4,8)).toFixed(2));
+  bars(ZL,1+.3*zw,1+.27*zw).forEach((q,i)=>$('zc'+i).setAttribute('points',pts(q)));
+  // zebra-crossing extras
+  [...$('extras').children].forEach((p,j)=>{const k=[-2,2,-3,3,-4,4][j],a=Math.abs(k)-2,e=expoOut(seg(t,8.08+.05*a,8.5+.05*a))-expoOut(seg(t,9,9.3));
+    p.setAttribute('points',pts(cross(k,e)));p.style.visibility=e>.003&&t<9.35?'visible':'hidden'});
+  // white fill for the end card
+  $('wfill').setAttribute('r',(2700*expoOut(seg(t,12.05,12.45))).toFixed(1));
+  // ring -> star rim -> key bow
+  const kp=expoOut(seg(t,11,11.4)),rr=lerp(150,95,kp)*(1-expoOut(seg(t,12.5,12.8))),cy=lerp(SC[1],CK[1],kp),ring=$('ring'),circ=2*Math.PI*150;
+  ring.setAttribute('cx',1300);ring.setAttribute('cy',cy.toFixed(2));ring.setAttribute('r',Math.max(rr,0).toFixed(2));
+  ring.setAttribute('transform',`rotate(-90 1300 ${cy.toFixed(2)})`);ring.setAttribute('stroke',mixC(SILVER,PINK,kp*1.6));
+  ring.setAttribute('stroke-dasharray',circ.toFixed(1));ring.setAttribute('stroke-dashoffset',(circ*(1-expoOut(seg(t,9.5,9.95)))).toFixed(1));
+  ring.style.visibility=t>=9.5&&rr>.6?'visible':'hidden';
+  const len=345*kp*(1-expoOut(seg(t,12.5,12.8))),th=Math.PI/2*spring(seg(t,12,12.45));
+  $('blade').setAttribute('points',pts(rot([[1284,cy+rr-4],[1316,cy+rr-4],[1316,cy+rr+len],[1284,cy+rr+len]],CK,th)));
+  $('blade').setAttribute('fill',mixC(SILVER,PINK,kp*1.6));$('blade').style.visibility=t>=11&&len>1?'visible':'hidden';
+  // through-line: the three stripes
+  const T=trio(t),g=$('trio');g.style.visibility=T.show?'visible':'hidden';
+  if(T.show){g.setAttribute('fill',T.fill);[...g.children].forEach((p,i)=>p.setAttribute('points',pts(T.q[i])))}
+  // cursor keeps a constant on-screen size while the camera zooms
+  const C=cursorPos(t),cs=1.75/c.s*(C.down?.84:1);
+  $('cursor').setAttribute('transform',`translate(${C.p[0].toFixed(2)} ${C.p[1].toFixed(2)}) scale(${cs.toFixed(3)})`);$('cursor').style.visibility=C.show?'visible':'hidden';
+};
+window.DUR=15;
+document.fonts.ready.then(()=>{window.READY=true;
+  if(location.hash==='#play'){const t0=performance.now();(function f(){seek(((performance.now()-t0)/1000)%15);requestAnimationFrame(f)})()}
+  else seek(+(location.hash.slice(1))||0)});
+</script>
+</body>
+</html>
