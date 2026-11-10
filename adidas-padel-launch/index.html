@@ -129,16 +129,16 @@ const expoOut=x=>x<=0?0:x>=1?1:1-Math.pow(2,-10*x);
 const expoIn=x=>x<=0?0:x>=1?1:Math.pow(2,10*(x-1));
 const expoIO=x=>x<=0?0:x>=1?1:x<.5?Math.pow(2,20*x-10)/2:(2-Math.pow(2,-20*x+10))/2;
 const spring=x=>x<=0?0:x>=1?1:1-Math.exp(-8*x)*Math.cos(7.5*x);
-const PINK=[255,31,142],WHITE=[255,255,255],SILVER=[201,206,211];
+const PINK=[255,31,142],BLACK=[0,0,0],WHITE=[255,255,255],SILVER=[201,206,211];
 const mixC=(a,b,p)=>{p=clamp(p);return `rgb(${a.map((v,i)=>Math.round(lerp(v,b[i],p))).join(',')})`};
 const pts=q=>q.map(p=>p[0].toFixed(2)+','+p[1].toFixed(2)).join(' ');
 const lerpQ=(a,b,p)=>a.map((pt,i)=>[lerp(pt[0],b[i][0],p),lerp(pt[1],b[i][1],p)]);
 const rot=(q,c,th)=>{const s=Math.sin(th),k=Math.cos(th);return q.map(p=>[c[0]+(p[0]-c[0])*k-(p[1]-c[1])*s,c[1]+(p[0]-c[0])*s+(p[1]-c[1])*k])};
 
 /* three-stripe mark geometry (unit = 1/100 of mark width) */
-const U=[-0.485,-0.875],BW=27.8,PITCH=35.2,L1=[10.4,35.6,63.3];
+const U=[-0.5,-0.866],BW=25.88,PITCH=34.5,L1=[10.2,34.9,59.55]; // traced from the supplied adidas Performance logo artwork
 function bars(L,g,wm=1){return [0,1,2].map(i=>{const gi=Array.isArray(g)?g[i]:g,x0=L.X+L.S*PITCH*i,w=L.S*BW*wm;
-  const a=L.S*L1[i]*gi,b=a+L.S*13.5*wm*clamp(gi*4);
+  const a=L.S*L1[i]*gi,b=a+L.S*.5*BW*wm*clamp(gi*4);
   return [[x0,L.Y],[x0+w,L.Y],[x0+w+U[0]*b,L.Y+U[1]*b],[x0+U[0]*a,L.Y+U[1]*a]];});}
 function mixL(a,b,p){const S=a.S*Math.pow(b.S/a.S,p);const pp=Math.abs(b.S-a.S)<1e-6?p:(S-a.S)/(b.S-a.S);return{X:lerp(a.X,b.X,pp),Y:lerp(a.Y,b.Y,pp),S};}
 function cross(k,e=1){const V=330,yF=560,yN=lerp(560,1180,e),f=y=>(y-V)/(560-V),cx=y=>960+k*120*f(y),hw=y=>36*f(y);
@@ -148,15 +148,15 @@ const SC=[1300,470],CK=[1300,330];
 function star(i,r){const a=([150,-90,30][i]+r)*Math.PI/180,R=143,q=R*.15,d=x=>[Math.cos(x),Math.sin(x)],s=Math.PI/3;
   const m=(v,k)=>[SC[0]+v[0]*k,SC[1]+v[1]*k];return [SC.slice(),m(d(a+s),q),m(d(a),R),m(d(a-s),q)];}
 function tooth(i){const ty=[610,675,740][i],w=[44,64,84][i];return [[1316,ty+18],[1316+w,ty+18],[1316+w,ty-18],[1316,ty-18]];}
-const HOOK={X:520,Y:1170,S:13},GH=[11,3.3,1.9],ZL={X:905,Y:790,S:8.3},END={X:820.2,Y:400,S:3};
+const HOOK={X:520,Y:1170,S:13},GH=[11,3.3,1.9],ZL={X:905,Y:790,S:8.3},END={X:825.3,Y:400,S:3};
 
 let M=null;
 function init(){ // measure layout once for match cuts (no transforms applied yet)
   const r=id=>$(id).getBoundingClientRect();
   const pr=r('nProd');$('dd').style.left=pr.left+'px';
   const ac=r('rAcc');$('sub').style.left=(pr.left+299)+'px';$('sub').style.top=ac.top+'px';
-  const ls=r('logoSlot'),S=ls.width/103,ba=r('rBalls');
-  M={HDR:{X:ls.left+5*S,Y:ls.bottom-2,S},prod:[pr.left+pr.width/2-8,pr.top+pr.height/2],acc:[ac.left+150,ac.top+22],
+  const ls=r('logoSlot'),S=ls.width/100,ba=r('rBalls');
+  M={HDR:{X:ls.left+5.1*S,Y:ls.bottom-2,S},prod:[pr.left+pr.width/2-8,pr.top+pr.height/2],acc:[ac.left+150,ac.top+22],
      balls:[ba.left+150,ba.top+22],ballO:[ba.left+60,ba.top+22]};
   const h=$('holes');let s='';for(let y=0;y<7;y++)for(let x=0;x<6;x++){const px=45+x*22,py=50+y*24;if(Math.hypot((px-100)/80,(py-120)/105)<1)s+=`<circle cx="${px}" cy="${py}" r="5.5"/>`}h.innerHTML=s;
   document.querySelectorAll('.card').forEach(c=>{c.insertAdjacentHTML('beforeend','<svg style="position:absolute;left:170px;top:8px" width="150" height="330" viewBox="0 0 200 440"><path d="M100 10c62 0 92 52 92 112 0 70-52 108-70 150l-6 150h-32l-6-150C60 230 8 192 8 122 8 62 38 10 100 10z" fill="#fff" stroke="#111" stroke-width="5"/><g fill="#111">'+s+'</g></svg>')});
@@ -179,21 +179,21 @@ function ball(t){ // position, radius, squash
   else{x=1500;y=730;r=90+2100*expoOut(seg(t,6,6.4))}
   if(t>=4.9&&t<6)for(const tl of[5,5.5])sq+=.14*Math.exp(-Math.pow((t-tl)/.05,2));
   return{x,y,r,sq};}
-const ballL=b=>({S:Math.max(b.r,.01)*.0105,X:b.x-46.6*b.r*.0105,Y:b.y+33.5*b.r*.0105});
+const ballL=b=>({S:Math.max(b.r,.01)*.0105,X:b.x-44.9*b.r*.0105,Y:b.y+31.4*b.r*.0105});
 
-function trio(t){let q,fill=mixC(PINK,PINK,0),show=true;
+function trio(t){let q,fill='#000',show=true;
   if(t<1.5)show=false;
   else if(t<2)q=bars(HOOK,[0,1,2].map(i=>GH[i]*expoOut(seg(t,1.5+.05*i,1.86+.05*i))));
   else if(t<4){const p=spring(seg(t,2,2.5));q=bars(mixL(HOOK,M.HDR,p),[0,1,2].map(i=>lerp(GH[i],1,clamp(p))))}
-  else if(t<6){const p=expoOut(seg(t,4,4.32));q=bars(mixL(M.HDR,ballL(ball(t)),p),1);fill=mixC(PINK,WHITE,p)}
+  else if(t<6){const p=expoOut(seg(t,4,4.32));q=bars(mixL(M.HDR,ballL(ball(t)),p),1);fill=mixC(BLACK,WHITE,p)}
   else if(t<6.5){const p=expoOut(seg(t,6,6.42));q=bars(mixL(ballL({x:1500,y:730,r:90}),ZL,p),1);fill='#fff'}
   else if(t<8){const g=t<7.5?1-expoOut(seg(t,6.5,6.9)):expoOut(seg(t,7.55,7.92));q=bars(ZL,g);fill='#fff';show=g>.002}
   else if(t<9){const p=expoOut(seg(t,8,8.42));const b=bars(ZL,1);q=b.map((x,i)=>lerpQ(x,cross(i-1),p));fill='#fff'}
   else if(t<10){const p=expoOut(seg(t,9,9.42));q=[0,1,2].map(i=>lerpQ(cross(i-1),RACE[i],p));fill=mixC(WHITE,SILVER,p)}
   else if(t<11){const p=spring(seg(t,10,10.5)),r=-50*(1-expoOut(seg(t,10,10.9)));q=[0,1,2].map(i=>lerpQ(RACE[i],star(i,r),p));fill=mixC(SILVER,SILVER,0)}
   else if(t<12){const p=expoOut(seg(t,11,11.4));q=[0,1,2].map(i=>lerpQ(star(i,0),tooth(i),p));fill=mixC(SILVER,PINK,p*1.6)}
-  else if(t<12.5){const th=Math.PI/2*spring(seg(t,12,12.45));q=[0,1,2].map(i=>rot(tooth(i),CK,th))}
-  else{const p=spring(seg(t,12.5,13)),e=bars(END,1);q=[0,1,2].map(i=>lerpQ(rot(tooth(i),CK,Math.PI/2),e[i],p))}
+  else if(t<12.5){const th=Math.PI/2*spring(seg(t,12,12.45));q=[0,1,2].map(i=>rot(tooth(i),CK,th));fill=mixC(PINK,PINK,0)}
+  else{const p=spring(seg(t,12.5,13)),e=bars(END,1);q=[0,1,2].map(i=>lerpQ(rot(tooth(i),CK,Math.PI/2),e[i],p));fill=mixC(PINK,BLACK,p)}
   return{q,fill,show};}
 
 function cursorPos(t){const A=[1560,820];let p;
