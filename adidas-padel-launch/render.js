@@ -72,6 +72,7 @@ function makeAudio(DUR) {
 (async () => {
   fs.mkdirSync(out, { recursive: true });
   const browser = await chromium.launch();
+  try {
   if (mode === 'audio') {
     const p = await openPage(browser);
     const b64 = await p.evaluate(makeAudio, DUR);
@@ -93,5 +94,10 @@ function makeAudio(DUR) {
       }
     }));
   }
-  await browser.close();
-})();
+  } finally {
+    await browser.close(); // always release the browser, even if a page load, seek or write fails
+  }
+})().catch(err => {
+  console.error(`render ${mode} failed (output dir: ${out}):`, err && err.message ? err.message : err);
+  process.exit(1);
+});
